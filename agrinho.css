@@ -1,0 +1,92 @@
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+header {
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+}
+
+p {
+  color: #666;
+}
+
+section {
+  padding: 20px;
+  border-bottom: 1px solid rgb(204, 204, 204);
+}
+
+#principal {
+  width: 100%;
+  max-width: 600px; /* Limita o tamanho máximo da imagem */
+  margin: 0 auto; /* Isso centralizará a imagem horizontalmente */
+  display: block; /* Garante que a margem automática funcione */
+}
+
+h2 {
+  margin-top: 0;
+}
+
+footer {
+  background-color: rgba(139, 219, 175, 0.432);
+  color: rgba(64, 97, 85, 0.5);
+  text-align: center;
+  padding: 5px 0;
+}
+
+.receitas-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centraliza as receitas */
+}
+
+.receita {
+  flex: 1 1 calc(50% - 20px); /* Ajusta para 50% da largura menos a margem */
+  max-width: calc(25% - 20px); /* Limita a largura máxima */
+  margin: 10px;
+  text-align: center;
+}
+
+.receita img {
+  width: 100%;
+  height: auto;
+  max-width: 300px; /* Aumentando o tamanho máximo das imagens */
+}
+
+footer img {
+  margin-left: 90px;
+  width: 30%;
+}
+
+/* Consultas de mídia para responsividade */
+@media (max-width: 768px) {
+  .receita {
+      flex: 1 1 calc(50% - 20px); /* Ajusta para 50% da largura menos a margem em telas menores */
+  }
+
+  footer img {
+      width: 50%; /* Ajusta o tamanho da imagem no rodapé para telas menores */
+      margin-left: 0; /* Remove a margem esquerda */
+  }
+}
+
+@media (max-width: 480px) {
+  .receita {
+      flex: 1 1 100%; /* Ajusta para 100% da largura em telas muito pequenas */
+  }
+
+  #principal{
+      width: 100%; /* Garante que a imagem ocupe 100% da largura disponível */
+  }
+}
